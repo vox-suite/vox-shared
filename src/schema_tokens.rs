@@ -33,30 +33,126 @@ const PALETTE_C: f32 = 0.14;
 /// coral-pulse accent so the new palette reads as an extension of it
 /// rather than a clash.
 pub const COLOR_TOKENS: [Oklch; TOKEN_COUNT] = [
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 20.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 35.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 50.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 65.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 80.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 95.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 110.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 125.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 140.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 155.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 170.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 185.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 200.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 215.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 230.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 245.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 260.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 275.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 290.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 305.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 320.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 335.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 350.0 },
-    Oklch { l: PALETTE_L, c: PALETTE_C, h: 5.0 },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 20.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 35.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 50.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 65.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 80.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 95.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 110.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 125.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 140.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 155.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 170.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 185.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 200.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 215.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 230.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 245.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 260.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 275.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 290.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 305.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 320.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 335.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 350.0,
+    },
+    Oklch {
+        l: PALETTE_L,
+        c: PALETTE_C,
+        h: 5.0,
+    },
 ];
 
 /// 24 lucide icon names (kebab-case, matching lucide-react's naming) for
@@ -101,19 +197,23 @@ pub fn oklch_to_srgb(color: Oklch) -> [u8; 3] {
     let a = color.c * h_rad.cos();
     let b = color.c * h_rad.sin();
 
-    let l_ = color.l + 0.3963377774 * a + 0.2158037573 * b;
-    let m_ = color.l - 0.1055613458 * a - 0.0638541728 * b;
-    let s_ = color.l - 0.0894841775 * a - 1.2914855480 * b;
+    let l_ = color.l + 0.396_337_78 * a + 0.215_803_76 * b;
+    let m_ = color.l - 0.105_561_346 * a - 0.063_854_17 * b;
+    let s_ = color.l - 0.089_484_18 * a - 1.291_485_5 * b;
 
     let l = l_ * l_ * l_;
     let m = m_ * m_ * m_;
     let s = s_ * s_ * s_;
 
-    let r_lin = 4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s;
-    let g_lin = -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s;
-    let b_lin = -0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s;
+    let r_lin = 4.076_741_7 * l - 3.307_711_6 * m + 0.230_969_94 * s;
+    let g_lin = -1.268_438 * l + 2.609_757_4 * m - 0.341_319_38 * s;
+    let b_lin = -0.0041960863 * l - 0.703_418_6 * m + 1.707_614_7 * s;
 
-    [gamma_encode(r_lin), gamma_encode(g_lin), gamma_encode(b_lin)]
+    [
+        gamma_encode(r_lin),
+        gamma_encode(g_lin),
+        gamma_encode(b_lin),
+    ]
 }
 
 fn gamma_encode(linear: f32) -> u8 {
@@ -128,13 +228,24 @@ fn gamma_encode(linear: f32) -> u8 {
 
 /// `oklch(L% C H)`, directly usable as a CSS color value.
 pub fn oklch_css(color: Oklch) -> String {
-    format!("oklch({}% {} {})", (color.l * 100.0).round(), color.c, color.h)
+    format!(
+        "oklch({}% {} {})",
+        (color.l * 100.0).round(),
+        color.c,
+        color.h
+    )
 }
 
 pub fn color_token(index: i32) -> Option<Oklch> {
-    usize::try_from(index).ok().and_then(|i| COLOR_TOKENS.get(i)).copied()
+    usize::try_from(index)
+        .ok()
+        .and_then(|i| COLOR_TOKENS.get(i))
+        .copied()
 }
 
 pub fn icon_token(index: i32) -> Option<&'static str> {
-    usize::try_from(index).ok().and_then(|i| ICON_TOKENS.get(i)).copied()
+    usize::try_from(index)
+        .ok()
+        .and_then(|i| ICON_TOKENS.get(i))
+        .copied()
 }
