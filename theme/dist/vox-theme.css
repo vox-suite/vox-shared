@@ -1,0 +1,25 @@
+:root {
+  --vox-background: #040506;
+  --vox-surface: #07080a;
+  --vox-surface-raised: #111214;
+  --vox-surface-accent: #1b1c1e;
+  --vox-border: #232427;
+  --vox-border-strong: #2f3031;
+  --vox-text: #ffffff;
+  --vox-text-muted: #9c9c9d;
+  --vox-text-dim: #6a6b6c;
+  --vox-primary: #e6e6e6;
+  --vox-primary-hover: #ffffff;
+  --vox-on-primary: #454647;
+  --vox-coral: #ff6363;
+  --vox-gold: #ffbc33;
+  --vox-mint: #59d499;
+  --vox-sky: #63a1ff;
+  --vox-crimson: #d94f4f;
+  --vox-danger: #ff6363;
+  --vox-success: #59d499;
+  --vox-radius-control: 8px;
+  --vox-radius-card: 20px;
+  --vox-radius-pill: 9999px;
+  color-scheme: dark;
+}

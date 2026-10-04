@@ -7,3 +7,7 @@ Right now it holds one thing: `sms`, the SMS-classification taxonomy and result 
 ## Adding to it
 
 Add a module here only for something that's *already* duplicated verbatim in two places in the Vox codebases — not speculatively. If you're not sure, it probably doesn't belong here yet.
+
+## Theme
+
+`theme/` holds the dark design tokens shared by web, desktop and Android. Edit `theme/tokens.json`, run `node theme/build.mjs`, and copy from `theme/dist/` (`vox-theme.css` for web and desktop, `VoxTheme.kt` for Android).
