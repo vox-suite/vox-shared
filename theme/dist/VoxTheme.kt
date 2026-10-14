@@ -80,11 +80,11 @@ object VoxLightColors {
     val Pink = Color(0xFFB8327A)
     val Orange = Color(0xFFB45309)
     val Slate = Color(0xFF566273)
-    val Map = Color(0xFFECEBE7)
-    val MapWater = Color(0xFFD3DDE2)
-    val MapLand = Color(0xFFE6E5E0)
-    val MapRoad = Color(0xFFFFFFFF)
-    val MapBuilding = Color(0xFFD8D7D2)
+    val Map = Color(0xFFC4CAC6)
+    val MapWater = Color(0xFF6B8FA8)
+    val MapLand = Color(0xFFB8BEBA)
+    val MapRoad = Color(0xFF8C938F)
+    val MapBuilding = Color(0xFFFFFFFF)
 }
 
 object VoxBrandColors {
