@@ -48,7 +48,7 @@ object VoxLightColors {
     val Surface = Color(0xFFFFFFFF)
     val SurfaceRaised = Color(0xFFEFEBE4)
     val SurfaceAccent = Color(0xFFE6E1D8)
-    val Panel = Color(0xFFFFFFFF)
+    val Panel = Color(0xFFFAF7F2)
     val Border = Color(0xFFE2DDD4)
     val BorderStrong = Color(0xFFCFC8BC)
     val Text = Color(0xFF1A1814)
