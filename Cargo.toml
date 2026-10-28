@@ -3,6 +3,14 @@ name = "vox-shared"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+default = []
+schema = ["dep:utoipa"]
+
 [dependencies]
+utoipa = { version = "5", optional = true }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+sha2 = "0.10"
+chrono = { version = "0.4", default-features = false, features = ["std"] }
+uuid = { version = "1", features = ["serde"] }

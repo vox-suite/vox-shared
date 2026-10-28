@@ -5,5 +5,6 @@
 * here only for something that's *already* duplicated verbatim in two
 * places -- not speculatively.
 */
+pub mod meetings;
 pub mod schema_tokens;
 pub mod sms;
