@@ -9,3 +9,11 @@ Local persistence: transcript fingerprint guards stale results independently of 
 Delivery: shared DTO/validation tests and dependency; Core authenticated stateless text endpoint, usage accounting, timeout and no-content telemetry; desktop SQLite v3 attachments/review receipts, native authenticated commands; summary/review UI with evidence and explicit cloud consent; fixtures/tests/fresh review, publish all changed repositories in dependency order. Local LLM execution, hierarchical long-transcript processing and packaged-device/provider-live verification remain separate. Reject large transcripts visibly rather than truncate them.
 
 Ruling: summary sections are generated/read-only; existing editable Your notes remain separate and are never overwritten or sent as part of this request. Task creation stores generated task text plus opaque source links only after review. Deleting a meeting removes local analysis/outbox data but keeps already-added Timeline tasks, as stated in the confirmation.
+
+## Completion evidence
+
+Shared validation and schema contract published as e09c160, followed by title validation regression fix 9b608ce. Core endpoint, usage scope, per-account budget, timeout and OpenAPI added; native owner-bound commands and SQLite v3 attached analysis/review receipts implemented. UI includes explicit cloud-text disclosure, cited sections, uncertain ownership, reviewed promotion and manual retry.
+
+Fresh whole-slice review found three P2s. Fixed all: orphan pending approvals remain independently visible after regeneration (browser RED -> GREEN); approved null deadlines stay null despite a newer suggestion (browser RED -> GREEN); title control characters rejected before attachment (protocol RED -> GREEN). Store suite 22/22 and controller suite 17/17 pass. Five meeting browser suites pass; production frontend build and native macOS check pass; strict meeting-store Clippy passes. Existing unrelated desktop Clippy warnings remain outside scope. Core final pre-push suite is the publish gate.
+
+Ruling: generated sections stay read-only while Your notes stays editable and excluded from model input. Cost: users edit their own notes rather than changing generated sections in this slice. Local LLM summary execution and hierarchical long-transcript processing remain future work; live provider and Windows device verification are not claimed.
