@@ -220,6 +220,7 @@ pub fn validate_analysis(
     for action in &mut output.actions {
         check(
             text_ok(&action.title, 800)
+                && !action.title.chars().any(char::is_control)
                 && action.title.chars().count() <= 200
                 && action.notes.len() <= 4000
                 && text_ok(&action.evidence_quote, 2000),
@@ -276,6 +277,9 @@ mod tests {
         validate_analysis(&request, &mut analysis).unwrap();
         let key = action_key(&request, &analysis.actions[0]).unwrap();
         assert_eq!(key.len(), 64);
+        analysis.actions[0].title = "Send\nproposal".into();
+        assert!(validate_analysis(&request, &mut analysis).is_err());
+        analysis.actions[0].title = "Send proposal".into();
         analysis.actions[0].evidence_quote = "Invented words".into();
         assert!(validate_analysis(&request, &mut analysis).is_err());
     }
